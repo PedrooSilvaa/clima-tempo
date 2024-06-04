@@ -5,6 +5,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
+margin-top: -20px;
 `
 
 export const ContainerGraus = styled.View`
@@ -14,12 +15,12 @@ align-items: center;
 `
 
 export const Graus = styled.Text`
-font-size: 120px;
+font-size: 100px;
 color: white;
 `
 
 export const Maxmin = styled.Text`
-font-size: 30px;
+font-size: 25px;
 color: white;
 `
 
