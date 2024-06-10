@@ -8,10 +8,6 @@ export function ShowTemp(props){
             
             <Temp.Img source={temp}></Temp.Img>
 
-            <Temp.ContainerGraus>
-                <Temp.Graus>{props.temAtual}º</Temp.Graus>
-                <Temp.Maxmin>Max: {props.max}º Min: {props.min}º</Temp.Maxmin>
-            </Temp.ContainerGraus>
 
         </Temp.Container>
 
