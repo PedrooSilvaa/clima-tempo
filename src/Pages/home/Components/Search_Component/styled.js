@@ -16,6 +16,7 @@ flex-direction: row;
 align-items: center;
 width: 375px;
 height: 30px;
+margin-top: 30px;
 `
 
 export const localizacao = styled.Text`
