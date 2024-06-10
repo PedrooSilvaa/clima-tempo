@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { View, Text } from 'react-native';
 import { getWeatherByCity } from './src/helpers/weatherRequest';
@@ -23,5 +24,6 @@ export default function App() {
         <Text style={{ color: 'white' }}>Carregando...</Text>
       )}
     </View>
+
   );
 }
