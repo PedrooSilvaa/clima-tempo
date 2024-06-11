@@ -2,13 +2,16 @@ import styled from "styled-components";
 
 export const ContainerAzul = styled.View`
 background-color: #003A8CB2;
-width: 335px;
-height: 115px;
+width: 90%;
+padding: 10px 0;
+height: fit-content;
 display: flex;
-justify-content: center;
+justify-content: space-between;
 align-items: center;
 border-radius: 15px;
-margin-top: 20px;
+margin: 20px 0;
+margin-bottom: 0;
+gap: 10px;
 `
 
 export const TituloCaixa = styled.Text`

@@ -1,8 +1,9 @@
 import styled from "styled-components/native";
 
 export const Container_Details = styled.View`
-    margin-top: 10px;
-    background-color: #001E48;
+    margin: 20px 0;
+    margin-bottom: 0;
+    background-color: #003A8CB2;
     width: 90%;
     padding: 20px;
     display: flex;

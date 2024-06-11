@@ -2,8 +2,8 @@ import styled from "styled-components/native";
 
 export const Container_Forecast = styled.View`
 
-    background-color: #001E48;
-    margin-top: 70px;
+    background-color: #003A8CB2;
+    margin-top: 20px;
     width: 90%;
     padding: 20px;
     display: flex;

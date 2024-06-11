@@ -6,16 +6,17 @@ import  umidade from "./../../../../Assets/umidade.png";
 import vento from "./../../../../Assets/vento.png";
 import nuvem from "../../../../Assets/nuvem.png";
 import indiceUV from "../../../../Assets/indiceUV.png";
+import { Text, TouchableOpacity, View } from "react-native";
 
 
 
-export default function PrevDaysIcons(){
+export default function PrevDaysIcons({onClick}){
     return(
+        <ContainerLider>
         <Padrao.ContainerAzul>
 
-            <Padrao.TituloCaixa>Previsão dos próximos 5 dias</Padrao.TituloCaixa>
+            <Padrao.TituloCaixa>Detalhes</Padrao.TituloCaixa>
             <Padrao.Line/>
-
             <Padrao.CaixaTemps>
                 <Card dia="Sens Térmica" temp="30º" img={termometro}/>
                 <Card dia="Prob. Chuva" temp="20%" img={nuvem}/>
@@ -24,5 +25,9 @@ export default function PrevDaysIcons(){
                 <Card dia="Indice UV" temp="5" img={indiceUV}/>
             </Padrao.CaixaTemps>
         </Padrao.ContainerAzul>
+        <TouchableOpacity  onPress={onClick}>
+            <Text style={{marginRight: 20, color: "white", fontSize: 20}}>Ver Mais</Text>
+        </TouchableOpacity>
+        </ContainerLider>
     )
 }

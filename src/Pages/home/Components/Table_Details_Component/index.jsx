@@ -5,10 +5,12 @@ import rain from "../../../../Assets/rain.png";
 import humidity from "../../../../Assets/humidity.png";
 import sun from "../../../../Assets/sun.png";
 import { Border_Details, Container_Details, Container_Details_Data, Icons_Details, Text_Details, Title_Details } from './styled'
+import { Text, TouchableOpacity, View } from 'react-native';
 
-const Details = () => {
+const Details = ({onClick}) => {
 return (
 
+    <ContainerLider>
     <Container_Details>
         <Title_Details>Detalhes</Title_Details>
         <Border_Details/>
@@ -45,7 +47,10 @@ return (
         </Container_Details_Data>
 
     </Container_Details>
-
+    <TouchableOpacity  onPress={onClick}>
+        <Text style={{marginRight: 20, color: "white", fontSize: 20}}>Ver Menos</Text>
+    </TouchableOpacity>
+    </ContainerLider>
 )
 }
 
