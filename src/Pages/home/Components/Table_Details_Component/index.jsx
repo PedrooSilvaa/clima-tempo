@@ -1,13 +1,11 @@
 import React from 'react'
 import thermometer from "../../../../Assets/thermometer.png";
-import wind from "../../../../Assets/wind.png";
-import rain from "../../../../Assets/rain.png";
-import humidity from "../../../../Assets/humidity.png";
-import sun from "../../../../Assets/sun.png";
+import windIcon from "../../../../Assets/wind.png";
+import humidityIcon from "../../../../Assets/humidity.png";
 import { Border_Details, Container_Details, Container_Details_Data, Icons_Details, Text_Details, Title_Details } from './styled'
 import { Text, TouchableOpacity, View } from 'react-native';
 
-const Details = ({onClick}) => {
+const Details = ({onClick, wind, sensacao, humidity}) => {
 return (
 
     <ContainerLider>
@@ -18,33 +16,22 @@ return (
         <Container_Details_Data>
             <Text_Details>Sensação Térmica</Text_Details>
             <Icons_Details source={thermometer}></Icons_Details>
-            <Text_Details>30°</Text_Details>
+            <Text_Details>{sensacao}º</Text_Details>
         </Container_Details_Data>
         
-        
-        <Container_Details_Data>
-            <Text_Details>Prob. Chuva</Text_Details>
-            <Icons_Details source={rain}></Icons_Details>
-            <Text_Details>30°</Text_Details>
-        </Container_Details_Data>
         
         <Container_Details_Data>
             <Text_Details>Velo. Vento</Text_Details>
-            <Icons_Details source={wind}></Icons_Details>
-            <Text_Details>30°</Text_Details>
+            <Icons_Details source={windIcon}></Icons_Details>
+            <Text_Details>{wind}km/h</Text_Details>
         </Container_Details_Data>
         
         <Container_Details_Data>
             <Text_Details>Umidade Ar</Text_Details>
-            <Icons_Details source={humidity}></Icons_Details>
-            <Text_Details>30°</Text_Details>
+            <Icons_Details source={humidityIcon}></Icons_Details>
+            <Text_Details>{humidity}%</Text_Details>
         </Container_Details_Data>
         
-        <Container_Details_Data>
-            <Text_Details>Indice Uv</Text_Details>
-            <Icons_Details source={sun}></Icons_Details>
-            <Text_Details>30°</Text_Details>
-        </Container_Details_Data>
 
     </Container_Details>
     <TouchableOpacity  onPress={onClick}>

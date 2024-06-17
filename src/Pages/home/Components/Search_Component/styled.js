@@ -19,11 +19,13 @@ height: 30px;
 margin-top: 30px;
 `
 
-export const localizacao = styled.Text`
+export const localizacao = styled.TextInput`
 margin-left: -10px;
 font-size: 20px;
 font-weight: 400;
-color: white;
+color: black;
+backgroundColor: white;
+width: 200px
 `
 
 export const iconLocal = styled.Image`

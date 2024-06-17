@@ -5,12 +5,11 @@ import termometro from "./../../../../Assets/termometro.png";
 import  umidade from "./../../../../Assets/umidade.png";
 import vento from "./../../../../Assets/vento.png";
 import nuvem from "../../../../Assets/nuvem.png";
-import indiceUV from "../../../../Assets/indiceUV.png";
 import { Text, TouchableOpacity, View } from "react-native";
 
 
 
-export default function PrevDaysIcons({onClick}){
+export default function PrevDaysIcons({onClick, wind, humidity, sensacao}){
     return(
         <ContainerLider>
         <Padrao.ContainerAzul>
@@ -18,11 +17,9 @@ export default function PrevDaysIcons({onClick}){
             <Padrao.TituloCaixa>Detalhes</Padrao.TituloCaixa>
             <Padrao.Line/>
             <Padrao.CaixaTemps>
-                <Card dia="Sens Térmica" temp="30º" img={termometro}/>
-                <Card dia="Prob. Chuva" temp="20%" img={nuvem}/>
-                <Card dia="Velo. Vento" temp="2km/h" img={vento}/>
-                <Card dia="Umidade Ar" temp="25%" img={umidade}/>
-                <Card dia="Indice UV" temp="5" img={indiceUV}/>
+                <Card dia="Sens Térmica" temp={`${sensacao}º`} img={termometro}/>
+                <Card dia="Velo. Vento" temp={`${wind}º`} img={vento}/>
+                <Card dia="Umidade Ar" temp={`${humidity}º`} img={umidade}/>
             </Padrao.CaixaTemps>
         </Padrao.ContainerAzul>
         <TouchableOpacity  onPress={onClick}>

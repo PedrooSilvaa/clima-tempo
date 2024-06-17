@@ -4,7 +4,7 @@ import  Card  from "../Cards";
 import temp from "../../../../Assets/temp.png"
 
 
-export function PrevHour(){
+export function PrevHour(props){
     return(
         <Hour.ContainerAzul>
             
@@ -12,12 +12,11 @@ export function PrevHour(){
             <Hour.Line/>
 
             <Hour.CaixaTemps>
-                <Card dia="Agora" temp="25º" img={temp}/>
-                <Card dia="12" temp="25º" img={temp}/>
-                <Card dia="13" temp="25º" img={temp}/>
-                <Card dia="14" temp="25º" img={temp}/>
-                <Card dia="15" temp="25º" img={temp}/>
-                <Card dia="16" temp="25º" img={temp}/>
+                <Card dia={props.dayOneHour} temp={props.dayOne} img={temp}/>
+                <Card dia={props.dayTwoHour} temp={props.dayTwo} img={temp}/>
+                <Card dia={props.dayThreeHour} temp={props.dayThree} img={temp}/>
+                <Card dia={props.dayFourHour} temp={props.dayFour} img={temp}/>
+                <Card dia={props.dayFiveHour} temp={props.dayFive} img={temp}/>
             </Hour.CaixaTemps>
         </Hour.ContainerAzul>
     )
